@@ -9,11 +9,20 @@
 <body>
     <h1>STEAM Who?</h1>
     <p>Descrivi il tuo personaggio utilizzando solo Si o No</p>
+    <p id="nDomandeChieste">Domande chieste: 0</p>
+    <p id="domanda"></p>
     <!--Bottone di scelta-->
     <ul>
-        <li><button id="si-button" onclick="test()">Si</button></li>
-        <li><button id="no-button">No</button></li>
+        <li>
+            <button id="si-button" onclick="prossimaDomanda(true)">Si</button>
+        </li>
+        <li>
+            <button id="no-button" onclick="prossimaDomanda(false)">No</button>
+        </li>
     </ul>
+
+   <input type="reset" value="Ricomincia" onclick="window.location.reload()" class="ricarica-button">
+
     <script src="js/index.js"></script>
 </body>
 </html>
