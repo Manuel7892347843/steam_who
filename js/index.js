@@ -6,9 +6,6 @@ const persone = [
     { nomeCompleto: 'Marie Curie', serbo: false, polacco: true, italiano: false, inglese: false, tedesco: false, fisico: false, artista: false, inventore: false, leggi_di_Newton: false, elettricità: false, Teoria_della_relatività: false, nobel: true },
     { nomeCompleto: 'Leonardo da Vinci', serbo: false, polacco: false, italiano: true, inglese: false, tedesco: false, fisico: false, artista: true, inventore: true, leggi_di_Newton: false, elettricità: false, Teoria_della_relatività: false, nobel: false },
     { nomeCompleto: 'Nicolaus Copernicus', serbo: false, polacco: true, italiano: false, inglese: false, tedesco: false, fisico: false, artista: false, inventore: false, leggi_di_Newton: false, elettricità: false, Teoria_della_relatività: false, nobel: false },
-    { nomeCompleto: 'Wolfgang Amadeus Mozart', serbo: false, polacco: false, italiano: true, inglese: false, tedesco: false, fisico: false, artista: true, inventore: false, leggi_di_Newton: false, elettricità: false, Teoria_della_relatività: false, nobel: false },
-    { nomeCompleto: 'Johann Sebastian Bach', serbo: false, polacco: false, italiano: false, inglese: false, tedesco: true, fisico: false, artista: true, inventore: false, leggi_di_Newton: false, elettricità: false, Teoria_della_relatività: false, nobel: false },
-    { nomeCompleto: 'Ludwig van Beethoven', serbo: false, polacco: false, italiano: false, inglese: false, tedesco: true, fisico: false, artista: true, inventore: false, leggi_di_Newton: false, elettricità: false, Teoria_della_relatività: false, nobel: false }
 ];
 
 const domande = [
