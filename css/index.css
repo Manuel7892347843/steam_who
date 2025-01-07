@@ -21,6 +21,7 @@ ul li {
     margin-right: 10px;
 }
 
+/*Bottone SI*/
 #si-button {
     background-color: #4CAF50;
     border: none;
@@ -35,6 +36,7 @@ ul li {
     border-radius: 10px;
 }
 
+/*Bottone NO*/
 #no-button {
     background-color: #c22828;
     border: none;
@@ -49,6 +51,7 @@ ul li {
     border-radius: 10px;
 }
 
+/*Bottone RICOMINCIA*/
 input{
     background-color: #104e7b;
     border: none;
