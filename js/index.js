@@ -1,26 +1,62 @@
+//Lista delle persone potenzialmente indovinabili
 const persone = [
-    { nomeCompleto: 'Albert Einstein', serbo: false, polacco: false, italiano: false, inglese: false, tedesco: true, fisico: true, artista: false, inventore: false, leggi_di_Newton: false, elettricità: false, Teoria_della_relatività: true, nobel: true },
-    { nomeCompleto: 'Isaac Newton', serbo: false, polacco: false, italiano: false, inglese: true, tedesco: false, fisico: true, artista: false, inventore: false, leggi_di_Newton: true, elettricità: false, Teoria_della_relatività: false, nobel: false },
-    { nomeCompleto: 'Galileo Galilei', serbo: false, polacco: false, italiano: true, inglese: false, tedesco: false, fisico: false, artista: false, inventore: false, leggi_di_Newton: false, elettricità: false, Teoria_della_relatività: false, nobel: false },
-    { nomeCompleto: 'Nikola Tesla', serbo: true, polacco: false, italiano: false, inglese: false, tedesco: false, fisico: false, artista: false, inventore: true, leggi_di_Newton: false, elettricità: true, Teoria_della_relatività: false, nobel: false },
-    { nomeCompleto: 'Marie Curie', serbo: false, polacco: true, italiano: false, inglese: false, tedesco: false, fisico: false, artista: false, inventore: false, leggi_di_Newton: false, elettricità: false, Teoria_della_relatività: false, nobel: true },
-    { nomeCompleto: 'Leonardo da Vinci', serbo: false, polacco: false, italiano: true, inglese: false, tedesco: false, fisico: false, artista: true, inventore: true, leggi_di_Newton: false, elettricità: false, Teoria_della_relatività: false, nobel: false },
-    { nomeCompleto: 'Nicolaus Copernicus', serbo: false, polacco: true, italiano: false, inglese: false, tedesco: false, fisico: false, artista: false, inventore: false, leggi_di_Newton: false, elettricità: false, Teoria_della_relatività: false, nobel: false },
+    { nomeCompleto: 'Albert Einstein',tedesco: true, fisico: true, Teoria_della_relatività: true, nobel: true },
+    { nomeCompleto: 'Isaac Newton', inglese: true, fisico: true, leggi_di_Newton: true},
+    { nomeCompleto: 'Galileo Galilei', italiano: true, fisico: true, astronomo: true, filosofo: true, matematico: true, inventore: true},
+    { nomeCompleto: 'Nikola Tesla', serbo: true, inventore: true, fisico: true, ingegnere: true, elettrico: true },
+    { nomeCompleto: 'Marie Curie', polacco: true, fisica: true, chimico: true, radiazioni: true, nobel: true },
+    { nomeCompleto: 'Leonardo da Vinci', italiano: true, artista: true, inventore: true, scienziato: true, matematico: true },
+    { nomeCompleto: 'Thomas Edison', statunitense: true ,inventore: true, elettrico: true, chimico: true },
+    { nomeCompleto: 'Michael Faraday', inglese: true, fisico: true, chimico: true},
+    { nomeCompleto: 'Alessandro Volta', italiano: true, fisico: true, chimico: true},
+    { nomeCompleto: 'Antoine Lavoisier', francese: true, chimico: true,  biologo: true },
+    { nomeCompleto: 'Johannes Kepler', tedesco: true, astronomo: true, matematico: true, astrologo: true },
+    { nomeCompleto: 'Max Planck', tedesco: true, fisico: true, nobel: true, Teoria_dei_quanti: true },
+    { nomeCompleto: 'Werner Heisenberg', tedesco: true, fisico: true, nobel: true, Principio_di_indeterminazione: true},
+    { nomeCompleto: 'Erwin Schrödinger', austriaco: true, fisico: true, nobel: true },
+    { nomeCompleto: 'Louis Pasteur', francese: true, chimico: true, biologo: true, medico: true },
+    { nomeCompleto: 'Marcello Malpighi', italiano: true, biologo: true, medico: true },
+    { nomeCompleto: 'Nicolaus Copernicus', polacco: true, astronomo: true, matematico: true, medico: true },
+    { nomeCompleto: 'Tim Berners-Lee', inglese: true, informatico: true, WWW: true, Turing: true},
+    { nomeCompleto: 'Alan Turing', inglese: true, matematico: true, filosofo: true, logico: true, criptografo: true},
+    { nomeCompleto: 'Katherine Johnson', statunitense: true, matematico: true, fisico: true, scienziato: true, NASA: true}
 ];
 
+//Lista delle domande da chiedere all'utente
 const domande = [
     'Il personaggio è serbo?',
     'Il personaggio è polacco?',
     'Il personaggio è italiano?',
     'Il personaggio è inglese?',
     'Il personaggio è tedesco?',
+    'Il personaggio è francese?',
+    'Il personaggio è austriaco?',
+    'Il personaggio è statunitense?',
     'Il personaggio è un fisico?',
     'Il personaggio è un artista?',
     'Il personaggio è un inventore?',
-    'Il personaggio ha scoperto le leggi di Newton?',
+    'Il personaggio è un chimico?',
+    'Il personaggio è un astronomo?',
+    'Il personaggio è un filosofo?',
+    'Il personaggio è un matematico?',
+    'Il personaggio è un ingegnere?',
+    'Il personaggio è un astrologo?',
+    'Il personaggio è un medico?',
+    'Il personaggio è un biologo?',
+    'Il personaggio è un scienziato?',
+    'Il personaggio è un informatico?',
+    'Il personaggio è un logico?',
+    'Il personaggio è un criptografo?',
     'Il personaggio ha scoperto l\'elettricità?',
-    'Il personaggio ha scoperto la Teoria della relatività?',
-    'Il personaggio ha vinto un premio Nobel?'
+    'Il personaggio ha creato le Leggi di Newton?',
+    'Il personaggio ha creato la Teoria della relatività?',
+    'Il personaggio ha creato la Teoria di quanti?',
+    'Il personaggio ha creato il Principio di indeterminazione?',
+    'Il personaggio ha vinto un premio Nobel?',
+    'Il personaggio ha vinto un premio Turing?',
+    'Il personaggio ha scoperto le radiazioni?',
+    'Il personaggio ha creato il WWW (World Wide Web)?',
+    'Il personaggio ha lavorato alla Nasa?'
 ];
 
 // Associazione delle domande alle chiavi dell'oggetto persona
@@ -30,84 +66,82 @@ const mappaDomande = {
     'Il personaggio è italiano?': 'italiano',
     'Il personaggio è inglese?': 'inglese',
     'Il personaggio è tedesco?': 'tedesco',
+    'Il personaggio è francese?': 'francese', 
+    'Il personaggio è austriaco?': 'austriaco', 
+    'Il personaggio è statunitense?': 'statunitense',
     'Il personaggio è un fisico?': 'fisico',
     'Il personaggio è un artista?': 'artista',
     'Il personaggio è un inventore?': 'inventore',
-    'Il personaggio ha scoperto le leggi di Newton?': 'leggi_di_Newton',
-    'Il personaggio ha scoperto l\'elettricità?': 'elettricità',
-    'Il personaggio ha scoperto la Teoria della relatività?': 'Teoria_della_relatività',
-    'Il personaggio ha vinto un premio Nobel?': 'nobel'
+    'Il personaggio è un chimico?': 'chimico',
+    'Il personaggio è un astronomo?': 'astronomo',
+    'Il personaggio è un filosofo?': 'filosofo',
+    'Il personaggio è un matematico?': 'matematico',
+    'Il personaggio è un ingegnere?': 'ingegnere',
+    'Il personaggio è un astrologo?': 'astrologo',
+    'Il personaggio è un medico?': 'medico',
+    'Il personaggio è un biologo?': 'biologo',
+    'Il personaggio è un scienziato?': 'scienziato',
+    'Il personaggio è un informatico?': 'informatico',
+    'Il personaggio è un logico?': 'logico',
+    'Il personaggio è un criptografo?': 'criptografo',
+    'Il personaggio ha scoperto l\'elettricità?': 'elettrico',
+    'Il personaggio ha creato le Leggi di Newton?': 'leggi_di_Newton',
+    'Il personaggio ha creato la Teoria della relatività?': 'Teoria_della_relatività',
+    'Il personaggio ha creato la Teoria di quanti?': 'Teoria_dei_quanti',
+    'Il personaggio ha creato il Principio di indeterminazione?': 'Principio_di_indeterminazione',
+    'Il personaggio ha vinto un premio Nobel?': 'nobel',
+    'Il personaggio ha vinto un premio Turing?': 'Turing',
+    'Il personaggio ha scoperto le radiazioni?': 'radiazioni',
+    'Il personaggio ha creato il WWW (World Wide Web)?': 'WWW',
+    'Il personaggio ha lavorato alla Nasa?': 'NASA'
 };
 
-let nDomande = 0;
-let personeFiltrate = [...persone]; // Inizia con tutte le persone
-let conteggioRisposteVere = Array(persone.length).fill(0); // Inizializza un array per tenere traccia delle risposte vere
-let indiceCorrente = 0; // Dichiarato per tracciare la posizione nelle persone filtrate
+let nDomande = 0; // Numero di domande fatte
+let personeFiltrate = persone.slice(); // Copia dell'elenco delle persone
 
-// Funzione per mostrare la domanda corrente
+// Mostra la domanda attuale
 function mostraDomanda() {
     if (nDomande < domande.length && personeFiltrate.length > 0) {
-        // Trova la prossima persona valida
-        while (indiceCorrente < personeFiltrate.length && personeFiltrate[indiceCorrente] === null) {
-            indiceCorrente++; // Salta gli elementi null
-        }
-
-        if (indiceCorrente < personeFiltrate.length) {
-            document.getElementById('domanda').innerText = domande[nDomande];
-            document.getElementById('nDomandeChieste').innerText = `Domande chieste: ${nDomande + 1}`;
-        } else {
-            document.getElementById('domanda').innerText = 'Non ci sono più persone valide!';
-            stampaPersonaggioIndovinato(); // Chiama la funzione per stampare il personaggio
-        }
+        // Mostra la domanda e aggiorna il contatore
+        document.getElementById('domanda').innerText = domande[nDomande];
+        document.getElementById('nDomandeChieste').innerText = 'Domande chieste: ' + (nDomande + 1);
+    } else if (personeFiltrate.length === 1) {
+        // Se è rimasta una sola persona valida, termina il gioco
+        let nomePersonaggio = personeFiltrate[0].nomeCompleto;
+        document.getElementById('domanda').innerText = 'Il personaggio che stai pensando è: ' + nomePersonaggio;
     } else {
         document.getElementById('domanda').innerText = 'Non ci sono più domande o persone valide!';
-        stampaPersonaggioIndovinato(); // Chiama la funzione per stampare il personaggio
     }
 }
 
-// Funzione per stampare il nome del personaggio con il maggior numero di risposte vere
-function stampaPersonaggioIndovinato() {
-    // Trova il numero massimo di risposte vere
-    let maxRisposteVere = Math.max(...conteggioRisposteVere);
-
-    // Trova l'indice del personaggio con il massimo numero di risposte vere
-    let indicePersonaggioIndovinato = conteggioRisposteVere.indexOf(maxRisposteVere);
-
-    // Stampa il nome del personaggio con il massimo numero di risposte vere
-    if (maxRisposteVere > 0) {
-        console.log(`Il personaggio che stai pensando potrebbe essere: ${persone[indicePersonaggioIndovinato].nomeCompleto}`);
-        document.getElementById('domanda').innerText = `Il personaggio che stai pensando è: ${persone[indicePersonaggioIndovinato].nomeCompleto}`;
-    } else {
-        console.log('Nessuna persona corrisponde alle risposte date.');
-        document.getElementById('domanda').innerText = 'Nessuna persona corrisponde alle risposte date.';
-    }
-}
-
-// Funzione da chiamare quando si clicca "Sì" o "No"
+// Gestisce la risposta alla domanda
 function rispostaDomanda(risposta) {
     if (nDomande < domande.length && personeFiltrate.length > 0) {
-        const domandaCorrente = domande[nDomande];
-        const chiave = mappaDomande[domandaCorrente]; // Ottieni la chiave della domanda
+        let chiave = mappaDomande[domande[nDomande]];
 
-        // Controlla la risposta per la persona corrente
-        for (let i = 0; i < personeFiltrate.length; i++) {
-            if (personeFiltrate[i] !== null) {
-                const persona = personeFiltrate[i];
-
-                if ((risposta === 'Si' && !persona[chiave]) || (risposta === 'No' && persona[chiave])) {
-                    personeFiltrate[i] = null; // Escludi la persona
-                } else {
-                    conteggioRisposteVere[i]++; // Incrementa il conteggio delle risposte vere
-                }
+        // Filtra le persone in base alla risposta
+        personeFiltrate = personeFiltrate.filter(persona => {
+            if (risposta === 'Si') {
+                return persona[chiave] === true;
+            } else {
+                return persona[chiave] !== true;
             }
+        });
+
+        // Controlla se rimane una sola persona
+        if (personeFiltrate.length === 1) {
+            let nomePersonaggio = personeFiltrate[0].nomeCompleto;
+            document.getElementById('domanda').innerText = 'Il personaggio che stai pensando è: ' + nomePersonaggio;
+            return; // Termina la funzione
         }
 
-        nDomande++; // Passa alla prossima domanda
-        mostraDomanda(); // Mostra la prossima domanda
+        // Incrementa il numero di domande e mostra la prossima
+        nDomande++;
+        mostraDomanda();
     }
 }
 
-// Inizializzazione
-document.addEventListener('DOMContentLoaded', () => {
+// Avvia il gioco quando la pagina è pronta
+document.addEventListener('DOMContentLoaded', function () {
     mostraDomanda();
 });

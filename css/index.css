@@ -6,6 +6,7 @@
     font-family: "Poppins", serif;
 }
 
+/*Sfondo della pagina Web*/
 body{
     background: url(../img/sfondo.jpg);
     background-size: cover;
@@ -17,8 +18,8 @@ ul {
 }
 
 ul li {
-    display: inline;
-    margin-right: 10px;
+    display: inline;/*Imposta i due bottoni sulla stessa linea*/
+    margin-right: 10px;/*Distanzia i due bottoni di 10px*/
 }
 
 /*Bottone SI*/
