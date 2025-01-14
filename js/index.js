@@ -1,10 +1,10 @@
-//Lista delle persone potenzialmente indovinabili
+// Lista delle persone potenzialmente indovinabili
 const persone = [
     { nomeCompleto: 'Albert Einstein',tedesco: true, fisico: true, Teoria_della_relatività: true, nobel: true },
     { nomeCompleto: 'Isaac Newton', inglese: true, fisico: true, leggi_di_Newton: true},
     { nomeCompleto: 'Galileo Galilei', italiano: true, fisico: true, astronomo: true, filosofo: true, matematico: true, inventore: true},
     { nomeCompleto: 'Nikola Tesla', serbo: true, inventore: true, fisico: true, ingegnere: true, elettrico: true },
-    { nomeCompleto: 'Marie Curie', polacco: true, fisica: true, chimico: true, radiazioni: true, nobel: true },
+    { nomeCompleto: 'Marie Curie', polacco: true, fisico: true, chimico: true, radiazioni: true, nobel: true },
     { nomeCompleto: 'Leonardo da Vinci', italiano: true, artista: true, inventore: true, scienziato: true, matematico: true },
     { nomeCompleto: 'Thomas Edison', statunitense: true ,inventore: true, elettrico: true, chimico: true },
     { nomeCompleto: 'Michael Faraday', inglese: true, fisico: true, chimico: true},
@@ -22,7 +22,7 @@ const persone = [
     { nomeCompleto: 'Katherine Johnson', statunitense: true, matematico: true, fisico: true, scienziato: true, NASA: true}
 ];
 
-//Lista delle domande da chiedere all'utente
+// Lista delle domande da chiedere all'utente
 const domande = [
     'Il personaggio è serbo?',
     'Il personaggio è polacco?',
@@ -141,7 +141,5 @@ function rispostaDomanda(risposta) {
     }
 }
 
-// Avvia il gioco quando la pagina è pronta
-document.addEventListener('DOMContentLoaded', function () {
-    mostraDomanda();
-});
+//Mostra la prima domanda appena si carica la pagina
+mostraDomanda();
