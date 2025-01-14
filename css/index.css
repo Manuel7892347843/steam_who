@@ -8,8 +8,13 @@
 
 /*Sfondo della pagina Web*/
 body{
-    background: url(../img/sfondo.jpg);
+    background: url(../img/imgf.jpg);
     background-size: cover;
+    align-items: center;
+    justify-content: center;
+    display: absolute;
+    margin-top: 15%;
+    height: 100vh;
 }
 
 ul {
@@ -65,4 +70,9 @@ input{
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 10px;
+}
+
+/*Stile del testo in fondo alla pagina*/
+#crediti{
+    font-weight: 700;
 }

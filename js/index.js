@@ -59,7 +59,7 @@ const domande = [
     'Il personaggio ha lavorato alla Nasa?'
 ];
 
-// Associazione delle domande alle chiavi dell'oggetto persona
+// Associazione delle domande alle chiavi per ogni persona
 const mappaDomande = {
     'Il personaggio è serbo?': 'serbo',
     'Il personaggio è polacco?': 'polacco',
